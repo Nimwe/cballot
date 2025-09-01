@@ -1,0 +1,158 @@
+type: collection.insomnia.rest/5.0
+name: Tests RoleOrganisateur
+meta:
+  id: wrk_4aeadbe8ee8643b9bcc06a3fcbef5a37
+  created: 1756370082210
+  modified: 1756370082210
+  description: ""
+collection:
+  - url: http://localhost:8080/api/roles-organisateur
+    name: Create one Role
+    meta:
+      id: req_639f5d06e69b4f56a00240487a8ddc0a
+      created: 1756370087871
+      modified: 1756370135544
+      isPrivate: false
+      description: ""
+      sortKey: -1756370087871
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "libelle": "Admin"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/roles-organisateur/2
+    name: Read one Role
+    meta:
+      id: req_8fc076a5c59a4a489a9b1ec39f198886
+      created: 1756370453066
+      modified: 1756370474175
+      isPrivate: false
+      description: ""
+      sortKey: -1756369845660.5
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "libelle": "Admin"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/roles-organisateur
+    name: Read all Roles
+    meta:
+      id: req_51b66b0e290f497ea372962b4dfaac46
+      created: 1756370484908
+      modified: 1756370628057
+      isPrivate: false
+      description: ""
+      sortKey: -1756369724555.25
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/roles-organisateur/2
+    name: Update Role
+    meta:
+      id: req_9109b0661ca943fc881acb573b95f4bd
+      created: 1756370800442
+      modified: 1756371300371
+      isPrivate: false
+      description: ""
+      sortKey: -1756369664002.625
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "libelle": "SuperAdmin"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/roles-organisateur/2
+    name: Delete Role
+    meta:
+      id: req_23a12ba57b7e4f2797f6c6ef5bda6aea
+      created: 1756371578421
+      modified: 1756371585670
+      isPrivate: false
+      description: ""
+      sortKey: -1756369633726.3125
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "libelle": "SuperAdmin"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_655cdf455c9f03d2ecac5b80b678ba0024d371fa
+    created: 1756370082222
+    modified: 1756370082222
+environments:
+  name: Base Environment
+  meta:
+    id: env_655cdf455c9f03d2ecac5b80b678ba0024d371fa
+    created: 1756370082218
+    modified: 1756370082218
+    isPrivate: false

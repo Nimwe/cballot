@@ -1,0 +1,144 @@
+type: collection.insomnia.rest/5.0
+name: Tests Organisateurs
+meta:
+  id: wrk_de3fe67addf64c5fbaa9e9f6af3bd3c5
+  created: 1756216330680
+  modified: 1756366228048
+  description: ""
+collection:
+  - url: http://localhost:8080/api/organisateurs
+    name: Create Organisateur
+    meta:
+      id: req_39c0b39e2eb849b7afbb44e5d7501d61
+      created: 1756216330790
+      modified: 1756365466281
+      isPrivate: false
+      description: ""
+      sortKey: -1756216330790
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nom": "Dupont",
+          "email": "dupont@test.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/organisateurs
+    name: Read all Organisateurs
+    meta:
+      id: req_fac4e6c17e924a37bb3193c0043e9ec4
+      created: 1756365501248
+      modified: 1756365541744
+      isPrivate: false
+      description: ""
+      sortKey: -1756365501248
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/organisateurs/3
+    name: Read one Organisateur
+    meta:
+      id: req_107d419e87f44e9a866a40f1f73c83f7
+      created: 1756365556780
+      modified: 1756365622386
+      isPrivate: false
+      description: ""
+      sortKey: -1756365556780
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/organisateurs/3
+    name: Update one Organisateur
+    meta:
+      id: req_6127455624f448848de86ba31bd4b5a8
+      created: 1756365632953
+      modified: 1756365692419
+      isPrivate: false
+      description: ""
+      sortKey: -1756365632953
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nom": "Durand",
+          "email": "durand@test.com"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/organisateurs/4
+    name: Delete one Organisateur
+    meta:
+      id: req_31e01db182e243eb850d928e21794484
+      created: 1756365713314
+      modified: 1756367446281
+      isPrivate: false
+      description: ""
+      sortKey: -1756365713314
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.4.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_05f9f42f5a743bb463131dd7476c4b507dbb84b0
+    created: 1756216330683
+    modified: 1756216330683
+environments:
+  name: Base Environment
+  meta:
+    id: env_05f9f42f5a743bb463131dd7476c4b507dbb84b0
+    created: 1756216330682
+    modified: 1756216330682
+    isPrivate: false

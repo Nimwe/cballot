@@ -30,12 +30,12 @@ CREATE TABLE formation(
    FOREIGN KEY(id_organisateur) REFERENCES organisateur(id_organisateur)
 );
 
-CREATE TABLE session_formation(
-   id_session_formation SERIAL,
+CREATE TABLE sessionFormation_formation(
+   id_sessionFormation_formation SERIAL,
    debut DATE,
    fin DATE,
    id_formation INTEGER NOT NULL,
-   PRIMARY KEY(id_session_formation),
+   PRIMARY KEY(id_sessionFormation_formation),
    FOREIGN KEY(id_formation) REFERENCES formation(id_formation)
 );
 
@@ -45,18 +45,18 @@ CREATE TABLE stagiaire(
    nom VARCHAR(250) ,
    prenom VARCHAR(250) ,
    id_binome_candidat INTEGER,
-   id_session_formation INTEGER NOT NULL,
+   id_sessionFormation_formation INTEGER NOT NULL,
    PRIMARY KEY(id_stagiaire),
    FOREIGN KEY(id_binome_candidat) REFERENCES binome_candidat(id_binome_candidat),
-   FOREIGN KEY(id_session_formation) REFERENCES session_formation(id_session_formation)
+   FOREIGN KEY(id_sessionFormation_formation) REFERENCES sessionFormation_formation(id_sessionFormation_formation)
 );
 
 CREATE TABLE scrutin(
    id_scrutin SERIAL,
    equipe_gagnante VARCHAR(250) ,
-   id_session_formation INTEGER NOT NULL,
+   id_sessionFormation_formation INTEGER NOT NULL,
    PRIMARY KEY(id_scrutin),
-   FOREIGN KEY(id_session_formation) REFERENCES session_formation(id_session_formation)
+   FOREIGN KEY(id_sessionformation_formation) REFERENCES sessionformation_formation(id_sessionformation_formation)
 );
 
 CREATE TABLE tour(
@@ -77,11 +77,11 @@ CREATE TABLE vote(
    FOREIGN KEY(id_tour) REFERENCES tour(id_tour)
 );
 
-CREATE TABLE organisateur-session_formation(
-   id_session_formation INTEGER,
+CREATE TABLE organisateur-sessionFormation_formation(
+   id_sessionFormation_formation INTEGER,
    id_organisateur INTEGER,
-   PRIMARY KEY(id_session_formation, id_organisateur),
-   FOREIGN KEY(id_session_formation) REFERENCES session_formation(id_session_formation),
+   PRIMARY KEY(id_sessionFormation_formation, id_organisateur),
+   FOREIGN KEY(id_sessionFormation_formation) REFERENCES sessionFormation_formation(id_sessionFormation_formation),
    FOREIGN KEY(id_organisateur) REFERENCES organisateur(id_organisateur)
 );
 
